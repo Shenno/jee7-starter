@@ -1,13 +1,10 @@
 package com.realdolmen.course.domain;
 
-public class Dog {
+import java.io.Serializable;
+
+public class Dog implements Serializable {
 	private String breed;
 	private String color;
-
-	public Dog(String breed, String color) {
-		this.breed = breed;
-		this.color = color;
-	}
 
 	public String getBreed() {
 		return breed;
@@ -23,6 +20,10 @@ public class Dog {
 
 	public void setColor(String color) {
 		this.color = color;
+	}
+
+	public String bark() {
+		return "Waf";
 	}
 
 }
